@@ -1,0 +1,87 @@
+/* NAVBAR */
+.navbar{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+
+    background: rgba(12, 2, 45, 0.75);
+    backdrop-filter: blur(12px);
+
+    box-shadow:0 4px 20px rgba(0,0,0,0.7);
+
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+/* LOGO */
+.logo{
+    color:#e50914;
+    font-size:30px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    cursor:pointer;
+}
+
+/* NAV LINKS */
+.nav-links{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    padding:0;
+    margin:0;
+}
+
+/* automatic spacing */
+.nav-links li + li{
+    margin-left:50px;
+}
+
+/* LINK STYLE */
+.nav-links a{
+    text-decoration:none;
+    color:#e5e5e5;
+    font-size:18px;
+    font-weight:600;
+    position:relative;
+    transition:0.3s;
+}
+
+/* Hover glow */
+.nav-links a:hover{
+    color:#ffffff;
+}
+
+/* Animated underline */
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0%;
+    height:3px;
+    background:#e50914;
+    border-radius:10px;
+    transition:0.35s ease;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+
+.nav-links a.active{
+    color:#ffffff;
+}
+
+.nav-links a.active::after{
+    width:100%;
+}
+
+
+.logo:hover{
+    transform:scale(1.05);
+    transition:0.3s;
+}
